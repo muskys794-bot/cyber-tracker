@@ -3,136 +3,181 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>CYBER TRACKER</title>
 
 <style>
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background: #e9ebff;
-    color: #222;
+    background: #eef3ff;
+    color: #172554;
 }
 
 header {
     background: white;
-    padding: 22px 15px;
+    padding: 22px 6%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    box-shadow: 0 3px 10px #ccc;
+    align-items: center;
+    box-shadow: 0 3px 15px #0001;
 }
 
 .logo {
-    font-size: 22px;
+    font-size: 23px;
     font-weight: bold;
-    letter-spacing: 2px;
+    color: #075bea;
 }
 
-.menu {
-    font-size: 25px;
+nav a {
+    text-decoration: none;
+    color: #172554;
+    margin-left: 18px;
+    font-weight: bold;
+}
+
+.hero {
+    background: linear-gradient(135deg,#075bea,#172554);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.7;
 }
 
 .container {
-    max-width: 650px;
+    max-width: 750px;
     margin: 35px auto;
     padding: 15px;
 }
 
-.banner {
-    background: #0866ed;
-    color: white;
-    padding: 35px 25px;
-    border-radius: 18px;
-    text-align: center;
-    font-size: 20px;
-    line-height: 1.5;
-    margin-bottom: 35px;
-}
-
 .card {
-    background: #f8f9ff;
+    background: white;
     border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 3px 15px #d0d3e5;
+    padding: 30px;
+    box-shadow: 0 5px 25px #0001;
+    margin-bottom: 25px;
 }
 
 .status {
-    padding: 22px;
-    font-size: 20px;
+    color: #16a34a;
     font-weight: bold;
-    border-bottom: 1px solid #ddd;
-}
-
-.content {
-    padding: 25px;
+    margin-bottom: 25px;
 }
 
 .profile {
     text-align: center;
-    padding: 20px;
-    font-size: 21px;
-    font-weight: bold;
+    margin-bottom: 25px;
 }
 
-.circle {
-    width: 110px;
-    height: 110px;
-    background: #c5cce0;
+.avatar {
+    width: 100px;
+    height: 100px;
+    background: #dbeafe;
     border-radius: 50%;
-    margin: 0 auto 20px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 55px;
+    align-items: center;
+    margin: auto auto 15px;
+    font-size: 45px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #075bea;
+}
+
+p {
+    line-height: 1.6;
 }
 
 label {
     display: block;
-    font-size: 17px;
-    margin: 25px 0 12px;
+    margin: 20px 0 10px;
+    font-weight: bold;
 }
 
 input {
     width: 100%;
     padding: 16px;
-    border: 2px solid #ddd;
-    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
     font-size: 16px;
 }
 
 button {
     width: 100%;
-    background: #0866ed;
+    padding: 16px;
+    margin-top: 18px;
+    background: #075bea;
     color: white;
     border: none;
-    padding: 17px;
-    font-size: 19px;
-    border-radius: 12px;
-    margin-top: 25px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
     cursor: pointer;
 }
 
 button:hover {
-    background: #004bb5;
+    background: #003da8;
 }
 
 #result {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    background: #e5f3ff;
     display: none;
-    line-height: 1.5;
+    background: #eff6ff;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.socials a {
+    color: #075bea;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 footer {
+    background: #172554;
+    color: white;
     text-align: center;
     padding: 30px;
-    color: #555;
+    margin-top: 40px;
+}
+
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
 }
 </style>
 </head>
@@ -141,100 +186,40 @@ footer {
 
 <header>
     <div class="logo">🛡️ CYBER TRACKER</div>
-    <div class="menu">☰</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#security">Security</a>
+        <a href="#about">About</a>
+    </nav>
 </header>
+
+<section class="hero" id="home">
+    <h1>WELCOME TO CYBER TRACKER</h1>
+
+    <p>
+        Your digital safety starts here.<br>
+        Learn, explore and protect your online identity.
+    </p>
+</section>
 
 <div class="container">
 
-    <div class="banner">
-        Protect your online identity.
-        Learn how to identify weak passwords
-        and improve your account security.
-    </div>
-
     <div class="card">
 
-        <div class="status">
-            Status: Online 🟢
+        <div class="status">● System Online</div>
+
+        <div class="profile">
+            <div class="avatar">🛡️</div>
+            <h2>CYBER SECURITY CENTER</h2>
+            <p>Your online security matters.</p>
         </div>
 
-        <div class="content">
-
-            <div class="profile">
-                <div class="circle">👤</div>
-                CYBER SECURITY CHECKER
-            </div>
-
-            <hr>
-
-            <h3>Password Security Test</h3>
-
-            <p>
-                Test the strength of a sample password.
-                Your entry stays in this browser and is
-                never transmitted.
-            </p>
-
-            <label>Enter a sample password:</label>
-
-            <input
-                type="password"
-                id="password"
-                placeholder="Enter a sample password"
-            >
-
-            <button onclick="checkPassword()">
-                Check Password Strength
-            </button>
-
-            <div id="result"></div>
-
-        </div>
     </div>
-</div>
 
-<footer>
-    CYBER TRACKER © 2026
-    <br><br>
-    Learn. Protect. Stay Secure.
-</footer>
+    <div class="card" id="security">
 
-<script>
-function checkPassword() {
+        <h2>Password Security Checker</h2>
 
-    const password =
-        document.getElementById("password").value;
-
-    const result =
-        document.getElementById("result");
-
-    if (!password) {
-        alert("Please enter a sample password.");
-        return;
-    }
-
-    let score = 0;
-
-    if (password.length >= 8) score++;
-    if (/[A-Z]/.test(password)) score++;
-    if (/[a-z]/.test(password)) score++;
-    if (/[0-9]/.test(password)) score++;
-    if (/[^A-Za-z0-9]/.test(password)) score++;
-
-    let message;
-
-    if (score <= 2) {
-        message = "Weak password. Try making it longer and more complex.";
-    } else if (score <= 4) {
-        message = "Moderate password. Consider improving it.";
-    } else {
-        message = "Strong password! Good work.";
-    }
-
-    result.style.display = "block";
-    result.textContent = message;
-}
-</script>
-
-</body>
-              </html>
+        <p>
+            Test the strength of a sample password
